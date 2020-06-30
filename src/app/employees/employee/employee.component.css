@@ -1,0 +1,19 @@
+.id {
+    margin-bottom: 5px;
+}
+.fullName {
+    margin-bottom: 5px;
+}
+.empCode {
+    margin-bottom: 5px;
+}
+.position {
+    margin-bottom: 5px;
+}
+.mobile {
+    margin-bottom: 5px;
+}
+.btn {
+    color: blue;
+    background-color: bisque;
+}
