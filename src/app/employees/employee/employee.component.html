@@ -1,1 +1,24 @@
-<p>employee works!</p>
+<h2 style="color: blue;">EMP Register</h2>
+
+<div>
+    <form>
+        <div>
+            <input type="text" placeholder="id" [(ngModel)]="data.id" class="id">
+        </div>
+        <div>
+            <input type="text" placeholder="fullName" [(ngModel)]="data.fullName" class="fullName">
+        </div>
+        <div>
+            <input type="text" placeholder="code" [(ngModel)]="data.empCode" class="empCode">
+        </div>
+        <div>
+            <input type="text" placeholder="posision" [(ngModel)]="data.position" class="position">
+        </div>
+        <div>
+            <input type="text" placeholder="mobile" [(ngModel)]="data.mobile" class="mobile">
+        </div>
+        <div>
+            <button class="btn">Register</button>
+        </div>
+    </form>
+</div>
