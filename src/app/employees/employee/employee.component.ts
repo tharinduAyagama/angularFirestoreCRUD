@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { EmployeeService } from 'src/app/serves/employee.service';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-employee',
@@ -8,11 +9,25 @@ import { EmployeeService } from 'src/app/serves/employee.service';
 })
 export class EmployeeComponent implements OnInit {
 
-  public data;
-  constructor(private dataservice: EmployeeService) {
-    this.data = this.dataservice.empDate;}
+  constructor(public dataservice: EmployeeService) {
+
+  }
 
   ngOnInit(): void {
+    this.reset();
+  }
+
+  reset(form? : NgForm){
+    if(form != null){
+      form.resetForm();
+    }
+    this.dataservice.empDate = {
+      id: null, 
+      fullName: '',
+      empCode: '',
+      position: '',
+      mobile: ''
+    }
   }
 
 }

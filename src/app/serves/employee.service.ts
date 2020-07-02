@@ -1,12 +1,12 @@
 import { Injectable } from '@angular/core';
-import { employee } from './employee.model';
+import { Employee } from './employee.model';
 
 @Injectable({
   providedIn: 'root'
 })
 export class EmployeeService {
 
-  empDate: employee;
+  empDate: Employee;
   
   constructor() { }
 }

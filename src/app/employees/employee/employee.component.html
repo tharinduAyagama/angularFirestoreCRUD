@@ -1,21 +1,18 @@
 <h2 style="color: blue;">EMP Register</h2>
 
 <div>
-    <form>
+    <form #form="ngForm" autocomplete="off">
         <div>
-            <input type="text" placeholder="id" [(ngModel)]="data.id" class="id">
+            <input type="text" name="fullName" placeholder="fullName" [(ngModel)]="dataservice.empDate.fullName" class="fullName">
         </div>
         <div>
-            <input type="text" placeholder="fullName" [(ngModel)]="data.fullName" class="fullName">
+            <input type="text" name="empCode" placeholder="empCode" [(ngModel)]="dataservice.empDate.empCode" class="empCode">
         </div>
         <div>
-            <input type="text" placeholder="code" [(ngModel)]="data.empCode" class="empCode">
+            <input type="text" name="position" placeholder="position" [(ngModel)]="dataservice.empDate.position" class="position">
         </div>
         <div>
-            <input type="text" placeholder="posision" [(ngModel)]="data.position" class="position">
-        </div>
-        <div>
-            <input type="text" placeholder="mobile" [(ngModel)]="data.mobile" class="mobile">
+            <input type="text" name="mobile" placeholder="mobile" [(ngModel)]="dataservice.empDate.mobile" class="mobile">
         </div>
         <div>
             <button class="btn">Register</button>
