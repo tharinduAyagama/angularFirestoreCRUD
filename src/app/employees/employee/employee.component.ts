@@ -30,4 +30,8 @@ export class EmployeeComponent implements OnInit {
     }
   }
 
+  onClick(form: NgForm){
+    let userData = form.value;
+  }
+
 }
