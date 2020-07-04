@@ -1,1 +1,20 @@
-<p>employee-list works!</p>
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">emp_Code</th>
+        <th scope="col">fullname</th>
+        <th scope="col">position</th>
+        <th scope="col">mobile</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let list of employeeList">
+            <td>{{list.empCode}}</td>
+            <td>{{list.fullName}}</td>
+            <td>{{list.position}}</td>
+            <td>{{list.mobile}}</td>
+            <td><button type="button" class="btn btn-default btn-sm" style="color: red;"><span class="glyphicon glyphicon-trash"></span> Delete </button></td>
+        </tr>
+    </tbody>
+  </table>
