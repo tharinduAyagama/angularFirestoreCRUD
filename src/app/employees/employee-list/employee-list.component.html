@@ -15,7 +15,7 @@
             <td>{{list.position}}</td>
             <td>{{list.mobile}}</td>
             <td><button type="button" class="btn btn-default btn-sm" style="color: blue;" (click)="empUpdate(list)"><span class="glyphicon glyphicon-trash"></span> Update </button></td>
-            <td><button type="button" class="btn btn-default btn-sm" style="color: red;"><span class="glyphicon glyphicon-trash"></span> Delete </button></td>
+            <td><button type="button" class="btn btn-default btn-sm" style="color: red;" (click)="empDelete(list.id)"><span class="glyphicon glyphicon-trash"></span> Delete </button></td>
         </tr>
     </tbody>
   </table>

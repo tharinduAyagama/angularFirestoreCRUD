@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { EmployeeService } from 'src/app/serves/employee.service';
 import { Employee } from 'src/app/serves/employee.model';
+import { AngularFirestore } from '@angular/fire/firestore';
 
 @Component({
   selector: 'app-employee-list',
@@ -11,7 +12,8 @@ export class EmployeeListComponent implements OnInit {
 
   public employeeList = [];
 
-  constructor(private service: EmployeeService) {}
+  constructor(private service: EmployeeService,
+              private firestore: AngularFirestore) {}
 
   ngOnInit(): void {
     this.service.getEmployees().subscribe(array => {
@@ -26,6 +28,13 @@ export class EmployeeListComponent implements OnInit {
 
   empUpdate(list: Employee){
     this.service.empDate = Object.assign({} , list);
+  }
+
+  empDelete(id: string){
+    if(confirm('Are u sure that u want to delete this?')){
+      this.firestore.doc('employees/' + id).delete();
+      window.alert('Deleted succesfully');
+    }
   }
 
 }
