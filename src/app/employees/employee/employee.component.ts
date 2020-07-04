@@ -33,10 +33,20 @@ export class EmployeeComponent implements OnInit {
   }
 
   onClick(form: NgForm){
-    let userData = form.value;
-    this.firestore.collection('employees').add(userData);
-    form.reset();
-    window.alert('registered succefully');
+    let userData = Object.assign({} , form.value);
+    delete userData.id;
+
+    if(form.value.id == null){
+      this.firestore.collection('employees').add(userData);
+      form.reset();
+      window.alert('registered succefully');
+    }
+    else{
+      this.firestore.doc('employees/' + form.value.id).update(userData);
+      form.reset();
+      window.alert('updated succefully');
+    }
   }
+  
 
 }

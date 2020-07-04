@@ -24,4 +24,8 @@ export class EmployeeListComponent implements OnInit {
     });
   }
 
+  empUpdate(list: Employee){
+    this.service.empDate = Object.assign({} , list);
+  }
+
 }
